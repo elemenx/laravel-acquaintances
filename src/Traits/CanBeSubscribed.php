@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Multicaret\Acquaintances\Traits;
+namespace ElemenX\Acquaintances\Traits;
 
-use Multicaret\Acquaintances\Interaction;
+use ElemenX\Acquaintances\Interaction;
 
 /**
  * Trait CanBeSubscribed.

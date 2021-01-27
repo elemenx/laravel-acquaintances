@@ -1,6 +1,6 @@
 <?php
 
-namespace Multicaret\Acquaintances;
+namespace ElemenX\Acquaintances;
 
 /**
  * Class Status.

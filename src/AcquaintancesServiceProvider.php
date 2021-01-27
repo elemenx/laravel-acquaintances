@@ -1,7 +1,6 @@
 <?php
 
-
-namespace Multicaret\Acquaintances;
+namespace ElemenX\Acquaintances;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -24,8 +23,8 @@ class AcquaintancesServiceProvider extends ServiceProvider
      */
     protected function registerMigrations()
     {
-        if (count(\File::glob(database_path('migrations/*acquaintances*.php'))) === 0) {
-            $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        if (count(glob(database_path('migrations/*acquaintances*.php'))) === 0) {
+            $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
         }
     }
 
@@ -48,7 +47,8 @@ class AcquaintancesServiceProvider extends ServiceProvider
     protected function configure()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/acquaintances.php', 'acquaintances'
+            __DIR__ . '/../config/acquaintances.php',
+            'acquaintances'
         );
     }
 
@@ -60,13 +60,12 @@ class AcquaintancesServiceProvider extends ServiceProvider
     protected function offerPublishing()
     {
         if ($this->app->runningInConsole()) {
-
             $this->publishes([
-                __DIR__.'/../config/acquaintances.php' => config_path('acquaintances.php'),
+                __DIR__ . '/../config/acquaintances.php' => config_path('acquaintances.php'),
             ], 'acquaintances-config');
 
             $this->publishes([
-                __DIR__.'/../database/migrations' => database_path('migrations'),
+                __DIR__ . '/../database/migrations' => database_path('migrations'),
             ], 'acquaintances-migrations');
         }
     }

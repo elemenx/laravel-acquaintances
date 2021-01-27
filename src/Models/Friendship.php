@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Multicaret\Acquaintances\Models;
+namespace ElemenX\Acquaintances\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Friendship
- * @package Multicaret\Acquaintances\Models
+ * @package ElemenX\Acquaintances\Models
  */
 class Friendship extends Model
 {

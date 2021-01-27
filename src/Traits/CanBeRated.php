@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Multicaret\Acquaintances\Traits;
+namespace ElemenX\Acquaintances\Traits;
 
-use Multicaret\Acquaintances\Interaction;
-use Multicaret\Acquaintances\Models\InteractionRelation;
+use ElemenX\Acquaintances\Interaction;
+use ElemenX\Acquaintances\Models\InteractionRelation;
 
 /**
  * Trait CanBeLiked.

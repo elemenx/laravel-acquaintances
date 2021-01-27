@@ -1,14 +1,14 @@
 <?php
 
 
-namespace Multicaret\Acquaintances\Traits;
+namespace ElemenX\Acquaintances\Traits;
 
 use Illuminate\Support\Facades\Event;
-use Multicaret\Acquaintances\Interaction;
+use ElemenX\Acquaintances\Interaction;
 
 /**
  * Class CanRate
- * @package Multicaret\Acquaintances\Traits
+ * @package ElemenX\Acquaintances\Traits
  */
 trait CanRate
 {

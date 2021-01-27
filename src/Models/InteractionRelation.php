@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Multicaret\Acquaintances\Models;
+namespace ElemenX\Acquaintances\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
