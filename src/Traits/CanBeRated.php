@@ -62,7 +62,7 @@ trait CanBeRated
      */
     public function raters($isAllTypes = false)
     {
-        $relation = $this->morphToMany(config('auth.providers.users.model'), 'subject',
+        $relation = $this->morphToMany(config('acquaintances.model_namespace') . '\\' . config('acquaintances.user_model_class_name'), 'subject',
             config('acquaintances.tables.interactions'))
                          ->wherePivot('relation', '=', Interaction::RELATION_RATE);
 

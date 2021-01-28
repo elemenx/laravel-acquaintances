@@ -1,10 +1,8 @@
 <?php
 
-
 namespace ElemenX\Acquaintances\Traits;
 
 use ElemenX\Acquaintances\Interaction;
-
 
 /**
  * Trait CanBeFavorited.
@@ -30,8 +28,11 @@ trait CanBeFavorited
      */
     public function favoriters()
     {
-        return $this->morphToMany(config('auth.providers.users.model'), 'subject',
-            config('acquaintances.tables.interactions'))
+        return $this->morphToMany(
+            config('acquaintances.model_namespace') . '\\' . config('acquaintances.user_model_class_name'),
+            'subject',
+            config('acquaintances.tables.interactions')
+        )
                     ->wherePivot('relation', '=', Interaction::RELATION_FAVORITE)
                     ->withPivot(...Interaction::$pivotColumns);
     }
